@@ -1,6 +1,7 @@
 let mysql = require("mysql");
 require("dotenv").config();
 let inquirer = require("inquirer");
+let bamazon = require("./bamazon");
 
 function customer() {
   let con = mysql.createConnection({
@@ -78,7 +79,7 @@ function customer() {
                     } else {
                       con.end();
                       console.log("Thank you for your business!");
-                      return;
+                      bamazon();
                     }
                   });
               });
