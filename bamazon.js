@@ -1,6 +1,6 @@
 let customer = require("./bamazonCustomer");
 let manager = require("./bamazonManager");
-// let supervisor = require("./bamazonSupervisor");
+let supervisor = require("./bamazonSupervisor");
 let inquirer = require("inquirer");
 
 function bamazon() {
@@ -14,15 +14,16 @@ function bamazon() {
         default: "Customer"
       }
     ])
-    .then(response => {
+    .then(async response => {
       switch (response.view) {
         case "Customer":
-          customer();
+          await customer();
           break;
         case "Manager":
           manager();
           break;
         case "Supervisor":
+          supervisor();
           break;
         default:
           customer();
@@ -30,4 +31,5 @@ function bamazon() {
       }
     });
 }
-module.exports = bamazon;
+
+bamazon();

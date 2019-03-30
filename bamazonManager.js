@@ -1,7 +1,6 @@
 let mysql = require("mysql");
 require("dotenv").config();
 let inquirer = require("inquirer");
-let bamazon = require("./bamazon");
 
 function manager() {
   let con = mysql.createConnection({
@@ -20,7 +19,7 @@ function manager() {
           {
             type: "list",
             name: "choice",
-            message: "What would you like to see",
+            message: "What would you like to do",
             choices: [
               "View Products for Sale",
               "View Low Inventory",
@@ -175,7 +174,7 @@ function manager() {
               });
           } else if (resp.choice === "Quit") {
             con.end();
-            bamazon();
+            return;
           }
         });
     });

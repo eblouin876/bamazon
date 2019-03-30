@@ -1,7 +1,6 @@
 let mysql = require("mysql");
 require("dotenv").config();
 let inquirer = require("inquirer");
-let bamazon = require("./bamazon");
 
 function customer() {
   let con = mysql.createConnection({
@@ -56,8 +55,9 @@ function customer() {
                 }
               ])
               .then(result => {
+                let cost = object.price * result.num;
                 console.log(
-                  `That will be $${(object.price * result.num).toFixed(
+                  `That will be $${cost.toFixed(
                     2
                   )}. Thank you for your purchase!`
                 );
@@ -65,6 +65,19 @@ function customer() {
                   `UPDATE bamazon_db.products SET stock_quantity = ${object.stock_quantity -
                     result.num} WHERE id = ${object.id}`
                 );
+                con.query(
+                  `SELECT * from bamazon_db.departments WHERE department_name = "${
+                    object.department_name
+                  }"`,
+                  (err, result) => {
+                    con.query(
+                      `UPDATE bamazon_db.departments SET product_sales = ${(result[0].product_sales += cost)} WHERE department_name = "${
+                        result[0].department_name
+                      }"`
+                    );
+                  }
+                );
+
                 inquirer
                   .prompt([
                     {
@@ -79,7 +92,7 @@ function customer() {
                     } else {
                       con.end();
                       console.log("Thank you for your business!");
-                      bamazon();
+                      return;
                     }
                   });
               });
