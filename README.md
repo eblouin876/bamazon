@@ -1,4 +1,4 @@
-# Bamazo
+# Bamazon
 
 ## Description
 This is a command line program built off of node. It allows the user to query for information on movies, songs, and bands in the area via the command line orr by modifying random.txt
