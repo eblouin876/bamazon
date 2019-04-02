@@ -1,7 +1,7 @@
 # !/bin/bash
 
-user=$1
-pwd=$2
+read  -p "MySQL Username: "  user
+read -sp "MySQL Password:  " pwd
 
 echo "DB_USER='$user'" >> .env
 echo "DB_PASS='$pwd'" >> .env

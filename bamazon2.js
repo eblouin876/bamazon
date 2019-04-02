@@ -8,7 +8,7 @@ function bamazon() {
     .prompt([
       {
         type: "list",
-        message: "Which profile would you like to view?",
+        message: "\nWhich profile would you like to view?",
         choices: ["Customer", "Manager", "Supervisor", "Quit"],
         name: "view",
         default: "Customer"
