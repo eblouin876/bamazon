@@ -1,12 +1,13 @@
 let mysql = require("mysql");
+require("dotenv").config();
 
 function query(command) {
   return new Promise((resolve, reject) => {
     let connection = mysql.createConnection({
       host: "localhost",
       port: 3306,
-      user: user,
-      password: pwd
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS
     });
 
     connection.connect(async err => {
