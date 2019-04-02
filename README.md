@@ -22,3 +22,4 @@ If you come across any bugs or have any suggestions to improve the code, please 
 This project is part of a web development program I am currently enrolled in and is in the works. I will continue to improve upon it over the next few months. Directions at the moment include: 
 * Figuring out why manager and supervisor will quit out of the entire program after you run through the one of the functions
 * Cleaning up customer2.js
+* Clean up queries to use ? to prevent injection
