@@ -11,7 +11,7 @@ This is a command line program built off of node. It allows the user to query fo
 * Async/Await (made the query.js module functional)
 
 ## Instructions
-Clone the repo to a local directory. Start up your mysql server via your preferred method. If you do not have mysql installed, go to [MySql](https://dev.mysql.com/downloads/) and install the community server. Then, go to terminal (or powershell or gitbash), cd into the bamazon directory, and run the command ```sh install.sh``` to begin. When you quit out of the prompt, run node bamazon2.js to enter back in to the prompt. **If you rerun install, it will reset the database.
+Clone the repo to a local directory. Start up your mysql server via your preferred method. If you do not have mysql installed, go to [MySql](https://dev.mysql.com/downloads/) and install the community server. Then, go to terminal (or powershell or gitbash), cd into the bamazon directory, and run the command ```sh install.sh``` to begin. When you quit out of the prompt, run node bamazon2.js to enter back in to the prompt. **If you rerun install, it will reset the database.**
 
 ## Instructional Images
 
