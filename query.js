@@ -5,8 +5,8 @@ function query(command) {
     let connection = mysql.createConnection({
       host: "localhost",
       port: 3306,
-      user: "vsc",
-      password: "vscode"
+      user: user,
+      password: pwd
     });
 
     connection.connect(async err => {
@@ -19,5 +19,4 @@ function query(command) {
     });
   });
 }
-
 module.exports = query;
