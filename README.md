@@ -14,6 +14,14 @@ This is a command line program built off of node. It allows the user to query fo
 Clone the repo to a local directory. Start up your mysql server via your preferred method. If you do not have mysql installed, go to [MySql](https://dev.mysql.com/downloads/) and install the community server. Then, go to terminal (or powershell or gitbash), cd into the bamazon directory, and run the command ```sh install.sh``` to begin. When you quit out of the prompt, run node bamazon2.js to enter back in to the prompt. **If you rerun install, it will reset the database.**
 
 ## Instructional Images
+Customer View:
+![Image of Customer](gifs/Customer.gif)
+
+Manager View:
+![Image of Manager](gifs/Manager.gif)
+
+Supervisor View:
+![Image of Supervisor](gifs/Supervisor.gif)
 
 ## Support
 If you come across any bugs or have any suggestions to improve the code, please feel free to comment! I would love to improve the code and I'm very new to writing my own promisies.
